@@ -1,0 +1,98 @@
+@import url('https://fonts.cdnfonts.com/css/rengita');
+
+:root {
+  --bg-1: #393939;
+
+  --ui-1: #434343;
+  --ui-2: #535353;
+
+  --p-1: #e0e0e0;
+  --h-1: #fdfdfd;
+
+  --navbar: #2a2a2a;
+
+  --active: #27fdbd;
+  
+  --transition-time: .35s;
+  --border-radius: 2vmin;
+  --border-width: 0.35vmin;
+  --glow-strength: 0.35;
+  --glow-strength-hover: 0.75;
+  --font: 'Orbiter FBS Trial', sans-serif;
+}
+
+.Main {
+    height: auto;
+    width: auto;
+    background: var(--ui-1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0;
+    padding: 10vmin;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    border-radius: var(--border-radius);
+    aspect-ratio: 1 / 1;
+    resize: both;
+}
+.Main h1, p {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+.Main ul {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 4vmin;
+    color: var(--p-1);
+    line-height: 3.5vmin;
+    font-size: 3vmin;
+}
+.Main ul * {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-left: 3.5vmin;
+}
+.Main h1 {
+    color: var(--h-1);
+    padding-bottom: 0vmin;
+    font-size: 10vmin;
+    font-family: 'Rengita', sans-serif;
+    line-height: 9vmin;
+}
+.Main p {
+    color: var(--p-1);
+    line-height: 3.5vmin;
+    font-size: 3vmin;
+    padding-bottom: 1vmin;
+}
+.Button {
+    height: 6.5vmin;
+    width: 100%;
+    background: var(--ui-2);
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--active);
+    outline: none;
+    color: var(--h-1);
+    font-size: 3vmin;
+    transition: var(--transition-time);
+    cursor: pointer;
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 calc(2vmin * var(--glow-strength)) var(--active));
+}
+.Button:hover {
+    background: var(--active);
+    color: var(--ui-1);
+    filter: drop-shadow(0 0 calc(2vmin * var(--glow-strength-hover)) var(--active));
+    transform: scale(105%);
+}
